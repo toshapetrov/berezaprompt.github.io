@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Кем вы могли бы быть в мире «Психеи» Валерии Титовой</title>
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+    ym(102243622, 'init', {webvisor:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/102243622" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Space+Mono:wght@400;700&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #0a0a0a;
+    --near-black: #0f0f0f;
+    --dark: #141414;
+    --red: #c8372d;
+    --red-bright: #e84040;
+    --red-dim: #7a1f1a;
+    --cream: #e8dfc8;
+    --cream-dim: #a89f8a;
+    --pink: #d4608a;
+    --white: #f5f0e8;
+    --grid: rgba(200, 55, 45, 0.06);
+  }
+
+  html, body {
+    background: var(--black);
+    color: var(--cream);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 60px 24px 100px;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  .header-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .header h1 {
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+
+  .header-line {
+    width: 60px;
+    height: 1px;
+    background: var(--red-dim);
+    margin: 24px auto;
+  }
+
+  .header p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--cream-dim);
+    font-style: italic;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .progress-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 48px;
+  }
+
+  .progress-bar {
+    flex: 1;
+    height: 1px;
+    background: rgba(255,255,255,0.08);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: var(--red);
+    transition: width 0.5s ease;
+    box-shadow: 0 0 8px var(--red);
+  }
+
+  .progress-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--cream-dim);
+    white-space: nowrap;
+    min-width: 60px;
+    text-align: right;
+  }
+
+  .question-block {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .question-block.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .question-number {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--red-dim);
+    margin-bottom: 12px;
+  }
+
+  .question-text {
+    font-size: clamp(18px, 2.5vw, 22px);
+    line-height: 1.5;
+    color: var(--white);
+    margin-bottom: 32px;
+    font-style: italic;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .option-btn {
+    background: transparent;
+    border: 1px solid rgba(200, 55, 45, 0.2);
+    color: var(--cream);
+    padding: 16px 20px;
+    text-align: left;
+    cursor: pointer;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 15px;
+    line-height: 1.5;
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .option-btn:hover {
+    border-color: var(--red);
+    color: var(--white);
+  }
+
+  .option-btn .opt-letter {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: var(--red-dim);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .option-btn.selected {
+    border-color: var(--red-bright);
+    background: rgba(200, 55, 45, 0.12);
+    color: var(--white);
+  }
+
+  .nav-wrap {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 32px;
+  }
+
+  .btn-next {
+    background: transparent;
+    border: 1px solid var(--red-dim);
+    color: var(--red);
+    padding: 12px 32px;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .btn-next.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .result-block {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+  }
+
+  .result-block.visible {
+    display: block;
+    opacity: 1;
+  }
+
+  .result-image-wrap {
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    margin-bottom: 32px;
+    position: relative;
+  }
+
+  .result-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .result-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .result-title {
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
+
+  .result-desc {
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--cream);
+    margin-bottom: 24px;
+  }
+
+  .result-context {
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--cream-dim);
+    border-left: 1px solid var(--red-dim);
+    padding-left: 16px;
+    margin-bottom: 28px;
+    font-style: italic;
+  }
+
+  .result-phrase {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--red);
+    font-style: italic;
+  }
+
+  .btn-restart {
+    display: inline-block;
+    margin-top: 40px;
+    background: transparent;
+    border: 1px solid rgba(200, 55, 45, 0.3);
+    color: var(--cream-dim);
+    padding: 12px 28px;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .noise {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+</style>
+</head>
+<body>
+<div class="noise"></div>
+<div class="container">
+  <div class="header" id="header">
+    <div class="header-label">опрос · Валерия Титова</div>
+    <h1>Кем вы могли бы быть<br>в мире <em>«Психеи»</em>?</h1>
+    <div class="header-line"></div>
+    <p>Где ткань, память, интерфейс и тело оказываются на одной поверхности.</p>
+  </div>
+
+  <div class="progress-wrap" id="progressWrap" style="display:none">
+    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    <div class="progress-label" id="progressLabel">1 / 9</div>
+  </div>
+
+  <div id="quizArea">
+    <div class="question-block" id="questionBlock">
+      <div class="question-number" id="questionNumber">ВОПРОС 01</div>
+      <div class="question-text" id="questionText"></div>
+      <div class="options" id="optionsArea"></div>
+      <div class="nav-wrap">
+        <button class="btn-next" id="btnNext" onclick="nextQuestion()">Далее →</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="result-block" id="resultBlock">
+    <div class="result-image-wrap">
+      <img id="resultImg" src="" alt="">
+    </div>
+    <div class="result-tag">Твой результат</div>
+    <div class="result-title" id="resultTitle"></div>
+    <div class="result-line" style="width: 40px; height: 1px; background: var(--red-dim); margin-bottom: 24px;"></div>
+    <div class="result-desc" id="resultDesc"></div>
+    <div class="result-context" id="resultContext"></div>
+    <div class="result-phrase" id="resultPhrase"></div>
+    <button class="btn-restart" onclick="restart()">Пройти снова</button>
+  </div>
+</div>
+
+<script>
+const QUESTIONS = [
+  {
+    text: "Вы входите в пространство, где всё немного похоже на выставку, сон и открытый чат одновременно. Что вы замечаете первым?",
+    options: [
+      { letter: "A", text: "Лицо, которое выглядит как маска, но ведет себя почти живым существом.", score: "screen_mask" },
+      { letter: "B", text: "Тонкую красную линию, соединяющую предметы, тела и случайные фрагменты.", score: "red_thread_self_assembly" },
+      { letter: "C", text: "Предмет мебели, который почему-то кажется важнее некоторых людей в комнате.", score: "psyche_chair" },
+      { letter: "D", text: "Белую фигуру с длинными ушами и глазом, слишком внимательным для игрушки.", score: "white_rabbit_digital_eye" }
+    ]
+  },
+  {
+    text: "Перед вами стол со странными материалами для сборки личности. Что вы берете?",
+    options: [
+      { letter: "A", text: "Полупрозрачный фильтр, который можно надеть на лицо и сразу стать чуть более понятным для других.", score: "screen_mask" },
+      { letter: "B", text: "Катушку красной нити: она не объясняет смысл, но уверенно связывает разрозненное.", score: "red_thread_self_assembly" },
+      { letter: "C", text: "Пучок высокой травы, где забытые данные продолжают расти без зрителей.", score: "tall_grass_forgotten_information" },
+      { letter: "D", text: "Маленький фрагмент цифровой плоти, который то ли растет, то ли загружается.", score: "digital_organism" }
+    ]
+  },
+  {
+    text: "Какое пространство кажется вам наиболее убедительным?",
+    options: [
+      { letter: "A", text: "Комната с экранами, где каждая фигура уже приготовила для себя публичное лицо.", score: "screen_mask" },
+      { letter: "B", text: "Зал, где забытая информация прорастает как трава и постепенно закрывает прежний маршрут.", score: "tall_grass_forgotten_information" },
+      { letter: "C", text: "Галерейная сцена, где один спокойный предмет держит на себе всю тревогу композиции.", score: "psyche_chair" },
+      { letter: "D", text: "Карнавальный угол, где праздник уже закончился, но улыбка почему-то продолжает работать.", score: "clown_mask_failed_celebration" }
+    ]
+  },
+  {
+    text: "Фигура на экране не решила, быть человеком, интерфейсом или частью пейзажа. Как вы к ней относитесь?",
+    options: [
+      { letter: "A", text: "С осторожным интересом: возможно, перед вами проводник, который выглядит мягко, но смотрит как интерфейс.", score: "white_rabbit_digital_eye" },
+      { letter: "B", text: "Попробую увидеть, из каких следов она собрана и что в ней держится на случайности.", score: "red_thread_self_assembly" },
+      { letter: "C", text: "Буду наблюдать, как она адаптируется: вдруг это не ошибка, а новая форма жизни.", score: "digital_organism" },
+      { letter: "D", text: "Пойду за ней осторожно: иногда самый мягкий проводник ведет в самый странный слой.", score: "white_rabbit_digital_eye" }
+    ]
+  },
+  {
+    text: "Какой цвет, свет или фактура вам ближе?",
+    options: [
+      { letter: "A", text: "Розовый свет экрана: мягкий, тревожный и немного слишком социальный.", score: "screen_mask" },
+      { letter: "B", text: "Резкий карнавальный цвет, который сначала кажется веселым, а потом начинает вести себя подозрительно.", score: "clown_mask_failed_celebration" },
+      { letter: "C", text: "Зеленовато-серый шум зарослей, где память становится ландшафтом.", score: "tall_grass_forgotten_information" },
+      { letter: "D", text: "Органическая поверхность, где цифровое постепенно начинает напоминать кожу, грибницу или ткань.", score: "digital_organism" }
+    ]
+  },
+  {
+    text: "Что для вас ближе в ситуации внутреннего сбоя?",
+    options: [
+      { letter: "A", text: "Остаться неподвижным элементом сцены, пока вокруг все слишком активно меняет форму.", score: "psyche_chair" },
+      { letter: "B", text: "Признать фрагментарность и аккуратно связать то, что пока не совпадает.", score: "red_thread_self_assembly" },
+      { letter: "C", text: "Позволить забытому немного зарасти: не все нужно немедленно извлекать из архива.", score: "tall_grass_forgotten_information" },
+      { letter: "D", text: "Улыбнуться слишком ярко и тем самым честно показать, что система дала трещину.", score: "clown_mask_failed_celebration" }
+    ]
+  },
+  {
+    text: "В странной ситуации вас просят «просто быть собой». Ваше действие?",
+    options: [
+      { letter: "A", text: "Уточню, какую именно версию себя сейчас нужно предъявить.", score: "screen_mask" },
+      { letter: "B", text: "Соберу себя из архивов, снов, сообщений, ошибок и пары неучтенных деталей.", score: "red_thread_self_assembly" },
+      { letter: "C", text: "Займу место в углу и стану точкой, вокруг которой все наконец выстроится.", score: "psyche_chair" },
+      { letter: "D", text: "Посмотрю одним большим цифровым глазом так, будто ответ уже известен, но пока не загружен.", score: "white_rabbit_digital_eye" }
+    ]
+  },
+  {
+    text: "Как вы относитесь к памяти?",
+    options: [
+      { letter: "A", text: "Память — это предмет, который стоит на месте и потому помнит больше движущихся.", score: "psyche_chair" },
+      { letter: "B", text: "Память — это следы, которые можно собрать не по лицу, а по нитям, словам и ошибкам.", score: "red_thread_self_assembly" },
+      { letter: "C", text: "Память — это высокая трава: данные исчезают из вида, но не обязательно исчезают совсем.", score: "tall_grass_forgotten_information" },
+      { letter: "D", text: "Память — это среда, где старые данные могут вдруг начать вести себя как живые.", score: "digital_organism" }
+    ]
+  },
+  {
+    text: "Финальный выбор: что кажется вам самым точным способом остаться человеком в цифровом мире?",
+    options: [
+      { letter: "A", text: "Найти устойчивую форму и выдержать взгляд, даже если вокруг все мерцает.", score: "psyche_chair" },
+      { letter: "B", text: "Научиться видеть жизнь там, где раньше видели только код.", score: "digital_organism" },
+      { letter: "C", text: "Принять в себе странное существо: мягкое, внимательное и уже немного цифровое.", score: "white_rabbit_digital_eye" },
+      { letter: "D", text: "Не притворяться естественным: иногда честная искусственность человечнее гладкой нормы.", score: "clown_mask_failed_celebration" }
+    ]
+  }
+];
+
+const RESULTS_DATA = {
+  screen_mask: {
+    title: "Экранная маска",
+    image: "images/titova_v1_screen_mask.jpg",
+    desc: "Вы — лицо, которое понимает, что быть собой в цифровом пространстве значит всегда немного держать форму. Ваш образ собран из маски, рук, взгляда, сетки и рассыпающихся вокруг фрагментов. Вы не просто прячетесь: вы выбираете поверхность, через которую можно быть увиденным. В вас есть усталость публичного лица и точность музейного объекта. Вы знаете, что личность сегодня редко появляется без посредника — экрана, фильтра, жеста, рамки, чужого ожидания. Поэтому ваша маска не обман, а способ выдержать контакт.",
+    context: "В контексте «Психеи» экранная маска говорит о цифровой идентичности, социальной оболочке и необходимости заново собирать лицо в пространстве интерфейсов.",
+    phrase: "Вы не потеряли лицо. Вы просто держите его в актуальной версии."
+  },
+  red_thread_self_assembly: {
+    title: "Красная нить самосборки",
+    image: "images/titova_v1_red_thread.jpg",
+    desc: "Вы — связь между тем, что не обязано было совпасть. Ваша природа не в неподвижной форме, а в соединении: тело, ткань, ландшафт, цветы, провода, жест руки и цифровая сетка оказываются частью одного процесса. Вы не собираете себя из цельных фрагментов — вы удерживаете рядом несовместимое. В вас есть внимательность к разрывам и редкое терпение к хаосу. Там, где другие видят путаницу, вы замечаете маршрут. Там, где форма еще не сложилась, вы уже чувствуете, за какую нить можно потянуть.",
+    context: "В «Психее» красная нить может читаться как принцип самосборки личности: не готовый портрет, а сеть связей между следами, ошибками и воспоминаниями.",
+    phrase: "Вы не запутались. Вы просто еще не показали, что именно соединяете."
+  },
+  psyche_chair: {
+    title: "Розовое облако архива",
+    image: "images/titova_v1_chair.jpg",
+    desc: "Вы — яркая фигура, которая появляется там, где память слишком долго лежала в коробках. Ваша внешность почти празднична: розовые волосы, румянец, нарядная поверхность, театральное движение. Но в руках у вас не подарок, а архив. Вы соединяете легкость карнавального образа с серьезностью хранения. В вас есть важное противоречие: вы выглядите как украшение сцены, но на самом деле вы переносите ее смысл.",
+    context: "Этот образ можно связать с мотивами маски, архива и сбившегося праздника в визуальном мире «Психеи». Яркая кукольная форма не отменяет тревоги: она, наоборот, делает ее более заметной и почти официальной.",
+    phrase: "Вы пришли не веселиться. Просто у архива сегодня очень нарядный курьер."
+  },
+  digital_organism: {
+    title: "Цифровой организм",
+    image: "images/titova_v1_organism.jpg",
+    desc: "Вы — существо, которое возникло там, где живое и цифровое перестали уверенно отличаться друг от друга. Ваша форма похожа на тело, но тело это собрано из темной шерсти, шума, нитей, осколков и следов чужого присутствия. Вы не выглядите гладко или завершенно — и в этом ваша убедительность. Вы входите в пространство как новая биология, которой еще не выдали название. Вас можно принять за ошибку, но ошибка здесь слишком настойчива, слишком объемна и слишком жива. Вы не адаптируетесь к среде — вы проверяете, может ли среда стать вами.",
+    context: "В «Психее» цифровой организм становится образом новой телесности: не человека, не машины, а существа, выросшего из их длительного соседства.",
+    phrase: "Вы не баг. Просто биология еще не обновила словарь."
+  },
+  tall_grass_forgotten_information: {
+    title: "Голова в банке архива",
+    image: "images/titova_v1_grass.jpg",
+    desc: "Вы — образ памяти, которая уже не принадлежит одному телу. В вас есть что-то от античной головы, медицинского снимка, музейного слепка и цифрового файла, открытого слишком поздно. Вы не говорите прямо, но смотрите так, будто помните больше, чем положено изображению. Ваше лицо собрано из слоев: личного, культурного, машинного и случайного. Возможно, вы не храните прошлое — вы проверяете, способно ли оно снова стать живым.",
+    context: "Образ связан с логикой «Психеи», где человеческое лицо становится не портретом, а узлом данных, памяти, цифровой пыли и телесных следов. Розовые линии вокруг головы напоминают связи, нити самосборки или маршруты, по которым личность продолжает собираться после распада.",
+    phrase: "Вы не воспоминание. Вы архив, который внезапно начал смотреть в ответ."
+  },
+  white_rabbit_digital_eye: {
+    title: "Белый заяц с цифровым глазом",
+    image: "images/titova_v1_rabbit.jpg",
+    desc: "Вы — проводник, который выглядит почти знакомо, но слишком внимательно смотрит в ответ. В вашем образе есть след детской игрушки, сказочного персонажа и лабораторного существа, собранного из линий, рельефов и цифровой поверхности. Белое тело кажется мягким, но его структура напоминает карту, скан, схему или плоть, прошедшую через машинное зрение. Ваш большой глаз не просто видит — он регистрирует. Вы не пугаете напрямую, но заставляете задержаться: привычное детство здесь уже обработано, увеличено и возвращено как странный экспонат.",
+    context: "В контексте «Психеи» этот образ соединяет детскую форму, машинное зрение и тему цифрового организма.",
+    phrase: "Вы не следуете за белым кроликом. Вы и есть его обновленная версия."
+  },
+  clown_mask_failed_celebration: {
+    title: "Клоунская маска из сбившегося праздника",
+    image: "images/titova_v1_clown.jpg",
+    desc: "Вы — лицо праздника, который в какой-то момент перестал быть уверенным в себе. В вас есть яркость, гротеск, нарочитая улыбка и почти детская простота формы, но за этой простотой быстро проступает тревога. Вы умеете быть заметным, даже когда лучше было бы слиться с фоном. Ваш образ устроен как вывеска, которая слишком долго горела ночью: она всё еще обещает радость, но уже сообщает что-то другое. Ваша сила — в честной искусственности. Вы не пытаетесь выглядеть естественно, потому что знаете: иногда маска говорит точнее лица.",
+    context: "Карнавальное лицо, яркий рот, красный нос и ощущение смещенной радости.",
+    phrase: "Вы не шутка. Вы просто слишком ясно показываете, из чего сделана улыбка."
+  }
+};
+
+const TIE_BREAKER_ORDER = [
+  "psyche_chair",
+  "tall_grass_forgotten_information",
+  "white_rabbit_digital_eye",
+  "clown_mask_failed_celebration",
+  "digital_organism",
+  "red_thread_self_assembly",
+  "screen_mask"
+];
+
+let currentIdx = 0;
+let userAnswers = [];
+
+function showQuestion() {
+  const q = QUESTIONS[currentIdx];
+  const block = document.getElementById('questionBlock');
+  block.classList.remove('visible');
+  
+  setTimeout(() => {
+    document.getElementById('questionNumber').innerText = `ВОПРОС ${String(currentIdx + 1).padStart(2, '0')}`;
+    document.getElementById('questionText').innerText = q.text;
+    
+    const area = document.getElementById('optionsArea');
+    area.innerHTML = '';
+    q.options.forEach((opt, index) => {
+      const btn = document.createElement('button');
+      btn.className = 'option-btn';
+      btn.innerHTML = `<span class="opt-letter">${opt.letter}</span>${opt.text}`;
+      btn.onclick = () => selectOption(index);
+      area.appendChild(btn);
+    });
+
+    document.getElementById('btnNext').classList.remove('active');
+    document.getElementById('progressFill').style.width = `${((currentIdx + 1) / QUESTIONS.length) * 100}%`;
+    document.getElementById('progressLabel').innerText = `${currentIdx + 1} / ${QUESTIONS.length}`;
+    block.classList.add('visible');
+  }, 300);
+}
+
+function selectOption(idx) {
+  const btns = document.querySelectorAll('.option-btn');
+  btns.forEach(b => b.classList.remove('selected'));
+  btns[idx].classList.add('selected');
+  userAnswers[currentIdx] = QUESTIONS[currentIdx].options[idx].score;
+  document.getElementById('btnNext').classList.add('active');
+}
+
+function nextQuestion() {
+  if (currentIdx < QUESTIONS.length - 1) {
+    currentIdx++;
+    showQuestion();
+  } else {
+    showResult();
+  }
+}
+
+// ---
+function showResult() {
+  document.getElementById('quizArea').style.display = 'none';
+  document.getElementById('progressWrap').style.display = 'none';
+  document.getElementById('header').style.marginBottom = '20px';
+
+  const scores = {};
+  const lastOccurrence = {};
+
+  userAnswers.forEach((id, index) => {
+    scores[id] = (scores[id] || 0) + 1;
+    lastOccurrence[id] = index;
+  });
+
+  const maxVal = Math.max(...Object.values(scores));
+  const candidates = Object.keys(scores).filter(id => scores[id] === maxVal);
+
+  let finalId;
+  if (candidates.length === 1) {
+    finalId = candidates[0];
+  } else {
+    // Логика Tie-breaker...
+    let latestIdx = -1;
+    let tieCandidates = [];
+    candidates.forEach(id => {
+      if (lastOccurrence[id] > latestIdx) {
+        latestIdx = lastOccurrence[id];
+        tieCandidates = [id];
+      } else if (lastOccurrence[id] === latestIdx) {
+        tieCandidates.push(id);
+      }
+    });
+    finalId = TIE_BREAKER_ORDER.find(id => tieCandidates.includes(id)) || tieCandidates[0];
+  }
+
+  const res = RESULTS_DATA[finalId];
+  if (res) {
+    document.getElementById('resultImg').src = res.image;
+    document.getElementById('resultTitle').innerText = res.title;
+    document.getElementById('resultDesc').innerText = res.desc;
+    document.getElementById('resultContext').innerText = res.context;
+    document.getElementById('resultPhrase').innerText = res.phrase;
+    
+    // --- ИНТЕГРАЦИЯ С МЕТРИКОЙ ---
+    // Замените XXXXXXXX на номер вашего счетчика
+    if (typeof ym !== 'undefined') {
+        ym(102243622, 'reachGoal', 'quiz_finish_titova_v1', { result: finalId });
+        console.log('Result sent to Metrika:', finalId);
+    }
+    // ----------------------------
+  }
+  
+  const block = document.getElementById('resultBlock');
+  block.classList.add('visible');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+// ---
+
+// function showResult() {
+//   document.getElementById('quizArea').style.display = 'none';
+//   document.getElementById('progressWrap').style.display = 'none';
+//   document.getElementById('header').style.marginBottom = '20px';
+
+//   const scores = {};
+//   const lastOccurrence = {};
+
+//   userAnswers.forEach((id, index) => {
+//     scores[id] = (scores[id] || 0) + 1;
+//     lastOccurrence[id] = index;
+//   });
+
+//   const maxVal = Math.max(...Object.values(scores));
+//   const candidates = Object.keys(scores).filter(id => scores[id] === maxVal);
+
+//   let finalId;
+//   if (candidates.length === 1) {
+//     finalId = candidates[0];
+//   } else {
+//     let latestIdx = -1;
+//     let tieCandidates = [];
+    
+//     candidates.forEach(id => {
+//       if (lastOccurrence[id] > latestIdx) {
+//         latestIdx = lastOccurrence[id];
+//         tieCandidates = [id];
+//       } else if (lastOccurrence[id] === latestIdx) {
+//         tieCandidates.push(id);
+//       }
+//     });
+
+//     if (tieCandidates.length === 1) {
+//       finalId = tieCandidates[0];
+//     } else {
+//       finalId = TIE_BREAKER_ORDER.find(id => tieCandidates.includes(id)) || tieCandidates[0];
+//     }
+//   }
+
+//   const res = RESULTS_DATA[finalId];
+//   document.getElementById('resultImg').src = res.image;
+//   document.getElementById('resultTitle').innerText = res.title;
+//   document.getElementById('resultDesc').innerText = res.desc;
+//   document.getElementById('resultContext').innerText = res.context;
+//   document.getElementById('resultPhrase').innerText = res.phrase;
+  
+//   const block = document.getElementById('resultBlock');
+//   block.classList.add('visible');
+// }
+
+function restart() {
+  currentIdx = 0;
+  userAnswers = [];
+  document.getElementById('quizArea').style.display = 'block';
+  document.getElementById('progressWrap').style.display = 'flex';
+  document.getElementById('resultBlock').classList.remove('visible');
+  showQuestion();
+}
+
+window.onload = () => {
+  document.getElementById('progressWrap').style.display = 'flex';
+  showQuestion();
+};
+</script>
+</body>
+</html>
