@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dome Studio v2 — купольный конвертер картинок и видео</title>
+
 <!-- Open Graph / Facebook / Telegram -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://berezaprompt.ru/utility/dome_akopto.html">
@@ -31,7 +32,7 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/102243622" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
-  
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <style>
   :root{
@@ -250,6 +251,15 @@
 "use strict";
 const $ = id => document.getElementById(id);
 const DGRAY = [30,30,30]; // #1e1e1e per TZ
+
+const YM_COUNTER_ID = 102243622;
+
+function sendMetrikaGoal(goalName, params = {}) {
+  if (typeof window.ym === "function") {
+    window.ym(YM_COUNTER_ID, "reachGoal", goalName, params);
+  }
+}
+
 // модель по чертежу «Геосота V10 (1/2) D37»: полусфера Ø37 м, зенит 18,5 м;
 // скос входа — плоскость с уклоном 8.97°, до 4.0 м у задней стены
 const DOME={R:18.5,T:Math.PI/2,SY:1.0,Y:0.02};
@@ -625,13 +635,26 @@ async function setDomeVideo(file){
   bindSeek(v,$("pvSeek"),$("pvSeekCtl"));
   return true;
 }
+
 async function pvLoadFile(f){
   if(!f) return;
+
   let ok=true;
+
   if(f.type.startsWith("video/")) ok=await setDomeVideo(f);
   else if(f.type.startsWith("image/")) setDomeImage(await loadImg(f));
-  else { $("pvStatus").textContent="Нужна картинка или видео."; return; }
+  else {
+    $("pvStatus").textContent="Нужна картинка или видео.";
+    return;
+  }
+
   if(ok){
+    sendMetrikaGoal("dome_akopto_preview_file_uploaded", {
+      file_type: f.type.startsWith("video/") ? "video" : "image",
+      mime_type: f.type,
+      file_size_mb: +(f.size / 1024 / 1024).toFixed(2)
+    });
+
     $("pvFileLabel").classList.add("loaded");
     $("pvStatus").textContent=pvIsVideo
       ? "Видео на куполе, играет по кругу. Осмотритесь."
@@ -639,6 +662,7 @@ async function pvLoadFile(f){
     $("pvStatus").className="status ok";
   }
 }
+
 $("pvFile").addEventListener("change",e=>pvLoadFile(e.target.files[0]));
 $("pvPlay").addEventListener("click",()=>{
   if(!pvVideo) return;
